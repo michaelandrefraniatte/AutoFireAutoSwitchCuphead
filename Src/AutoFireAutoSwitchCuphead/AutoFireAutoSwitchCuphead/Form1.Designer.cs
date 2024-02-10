@@ -45,6 +45,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.toolStripComboBox1,
@@ -53,7 +54,7 @@
             this.toolStripTextBox2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(339, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(452, 32);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +67,7 @@
             this.toolStripSeparator1,
             this.toolStripSeparator2});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 28);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
             // ouvrirToolStripMenuItem
@@ -75,14 +76,14 @@
             this.ouvrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.ouvrirToolStripMenuItem.Text = "&Ouvrir";
             this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(210, 6);
             // 
             // enregistrerToolStripMenuItem
             // 
@@ -90,19 +91,19 @@
             this.enregistrerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.enregistrerToolStripMenuItem.Name = "enregistrerToolStripMenuItem";
             this.enregistrerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.enregistrerToolStripMenuItem.Text = "&Enregistrer";
             this.enregistrerToolStripMenuItem.Click += new System.EventHandler(this.enregistrerToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(210, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(210, 6);
             // 
             // toolStripComboBox1
             // 
@@ -180,8 +181,9 @@
             "RShift",
             " "});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(75, 21);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(99, 28);
             this.toolStripComboBox1.Text = "Fire";
+            this.toolStripComboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripComboBox1_KeyDown);
             // 
             // toolStripComboBox2
             // 
@@ -259,35 +261,42 @@
             "RShift",
             " "});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(75, 21);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(99, 28);
             this.toolStripComboBox2.Text = "Switch";
+            this.toolStripComboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripComboBox2_KeyDown);
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 21);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(65, 28);
             this.toolStripTextBox1.Text = "Interval";
+            this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(70, 21);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(92, 28);
             this.toolStripTextBox2.Text = "Press delay";
+            this.toolStripTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
             // 
             // AutoFireAutoSwitchCuphead
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutoFireAutoSwitchCuphead.Properties.Resources.cupheadImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(339, 266);
+            this.ClientSize = new System.Drawing.Size(452, 327);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AutoFireAutoSwitchCuphead";
             this.Text = "AutoFireAutoSwitchCuphead";
             this.Load += new System.EventHandler(this.AutoFireAutoSwitchCuphead_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AutoFireAutoSwitchCuphead_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
